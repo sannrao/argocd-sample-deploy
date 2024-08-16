@@ -1,0 +1,10 @@
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: {{ include "hello-world.fullname" . }}
+  labels:
+    {{- include "hello-world.labels" . | nindent 4 }}
+spec:
+  host: {{ .Values.route.host }}
+  prefix: /
+  service: {{ include "hello-world.fullname" . }}.svc.cluster.local:8{{ .Values.service.port }}
