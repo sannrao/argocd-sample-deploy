@@ -7,4 +7,4 @@ metadata:
 spec:
   host: {{ include "hello-world.fullname" . }}-app.k8s.sndevops.xyz
   prefix: /
-  service: {{ include "hello-world.fullname" . }}.svc.cluster.local:{{ .Values.service.port }}
+  service: {{ include "hello-world.fullname" . }}.default.svc.cluster.local:{{ .Values.service.port }}
