@@ -5,7 +5,7 @@ metadata:
 data:
   index.html: |
     <html>
-    <h1>Default value</h1>
+    <h1>Default value page</h1>
     <body>
     This is Nginx Server
     </body>
