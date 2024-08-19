@@ -5,6 +5,6 @@ metadata:
   labels:
     {{- include "hello-world.labels" . | nindent 4 }}
 spec:
-  host: {{ include "hello-world.fullname" . }}-app.k8s.sndevops.xyz
+  host: {{ .Values.route.host }}-argo-app.k8s.sndevops.xyz
   prefix: /
   service: {{ include "hello-world.fullname" . }}.default.svc.cluster.local:{{ .Values.service.port }}
