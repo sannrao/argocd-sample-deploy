@@ -18,7 +18,7 @@ spec:
       volumes:
       - name: index-html-configmap
         configMap:
-          name: index-html-configmap
+          name: {{ include "hello-world.fullname" . }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
