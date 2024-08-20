@@ -16,9 +16,9 @@ spec:
     spec:
       serviceAccountName: {{ include "hello-world.serviceAccountName" . }}
       volumes:
-      - name: nginx-index-file
+      - name: index-html-configmap
         configMap:
-          name: index-html-configma
+          name: index-html-configmap
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
@@ -28,7 +28,7 @@ spec:
               containerPort: 80
               protocol: TCP
           volumeMounts:
-            - name: nginx-index-file
+            - name: index-html-configmap
               mountPath: /usr/share/nginx/html/              
           livenessProbe:
             httpGet:
