@@ -12,7 +12,7 @@ nameOverride: ""
 fullnameOverride: ""
 
 route:
-  host: nginx8
+  host: nginx9
 
 serviceAccount:
   # Specifies whether a service account should be created
