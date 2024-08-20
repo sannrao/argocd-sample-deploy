@@ -2,6 +2,14 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+nginx:
+  homepage: |
+    <!DOCTYPE html> <html> <body>
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+    </body>
+    </html>
+
 image:
   repository: nginx
   pullPolicy: IfNotPresent
@@ -13,6 +21,7 @@ fullnameOverride: ""
 
 route:
   host: nginx10
+
 
 serviceAccount:
   # Specifies whether a service account should be created
