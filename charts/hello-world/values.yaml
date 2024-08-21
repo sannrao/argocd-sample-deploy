@@ -5,7 +5,7 @@
 nginx:
   homepage: |
     <!DOCTYPE html> <html> <body>
-    <h1>DevOps_Home_Page</h1>
+    <h1>DevOps_Home Page</h1>
     <p>My first paragraph.</p>
     </body>
     </html>
